@@ -1,7 +1,7 @@
 ro.product.brand=xiaomi
-ro.product.name=clover
-ro.product.device=clover
-ro.build.product=clover
+ro.product.name=tulip
+ro.product.device=tulip
+ro.build.product=tulip
 ro.treble.enabled=true
 sys.usb.controller=a800000.dwc3
 sys.usb.rndis.func.name=rndis_bam
