@@ -2130,26 +2130,3 @@ vendor/lib/libwfdhaldsmanager.so
 vendor/lib/libwfdhdcpcp.so
 vendor/lib/libwfdmmservice.so
 vendor/lib/libwfdmodulehdcpsession.so
-
-# mlipay
-vendor/bin/mlipayd
-vendor/lib64/libmlipay.so
-vendor/lib/libmlipay.so
-
-# rootdir services
-vendor/bin/adswitch
-vendor/bin/checknv
-vendor/bin/iwpriv
-vendor/bin/LctDiagSendData
-vendor/bin/loopbacktest
-vendor/bin/myftm
-vendor/bin/qdmastatsd
-vendor/bin/remosaic_daemon
-vendor/bin/smart-pa-cal
-vendor/bin/smart-pa-tfa-cal
-vendor/bin/tinyhostless
-vendor/bin/wdsdaemon
-vendor/bin/wifisarDIS1
-vendor/bin/wifisarDIS2
-vendor/lib/libLctDiagSendDataApi.so
-vendor/lib64/libLctDiagSendDataApi.so

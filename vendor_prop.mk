@@ -162,15 +162,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
 	keyguard.no_require_sim=true \
-	persist.miui.density_v2=440 \
 	persist.sys.job_delay=true \
-	persist.sys.mcd_config_file=/system/etc/mcd_default.conf \
 	persist.vendor.qcomsysd.enabled=1 \
 	ro.am.reschedule_service=true \
 	ro.colorpick_adjust=true \
-	ro.com.google.gmsversion=8.1_201809 \
 	ro.control_privapp_permissions=log \
-	ro.miui.notch=1 \
 	ro.opa.eligible_device=true \
 	ro.qualcomm.cabl=0 \
 	ro.sys.fw.use_trim_settings=true \
@@ -186,11 +182,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Netflix
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.netflix.bsp_rev=Q660-13149-1
-
-# NFC
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.hardware.nfc_nci=nqx.default \
-	ro.nfc.port=I2C
 
 # NTP Server
 PRODUCT_PROPERTY_OVERRIDES += \

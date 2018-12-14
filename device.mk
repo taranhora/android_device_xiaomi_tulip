@@ -328,7 +328,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     bluedut.sh \
     bt_close.sh \
-    capture_audio.sh \
     emmc_prop_init.sh \
     init.class_main.sh \
     init.crda.sh \
@@ -349,9 +348,6 @@ PRODUCT_PACKAGES += \
     init.qti.fm.sh \
     init.qti.ims.sh \
     init.qti.qseecomd.sh \
-    loopback.sh \
-    myftm.agent.sh \
-    playback_audio.sh \
     qca6234-service.sh \
     wifitest.sh \
     wifitest_close.sh \

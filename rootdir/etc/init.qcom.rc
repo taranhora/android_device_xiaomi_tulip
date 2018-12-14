@@ -301,11 +301,6 @@ on post-fs-data
     mkdir /data/dpm 0771 system system
     chown system system /data/dpm
 
-    # Create the directories used by LctDiagSendData
-    mkdir /data/lct_diag 0771 system system
-    chown system system /data/lct_diag
-    rm /data/lct_diag/client_*
-
     mkdir /data/dpm/nsrm 0771 system system
     chown system system /data/dpm/nsrm
 
@@ -383,10 +378,6 @@ on post-fs-data
     chmod 2770 /data/vendor/perfd
     rm /data/vendor/perfd/default_values
 
-    # NFC local data and nfcee xml storage
-    mkdir /data/nfc 0770 nfc nfc
-    mkdir /data/nfc/param 0770 nfc nfc
-
     #Create IOP  deamon related dirs
     mkdir /data/vendor/iop 0770 root system
 
@@ -428,12 +419,6 @@ on post-fs-data
 
     #Create FTM_AP dir for factory test
     mkdir /data/FTM_AP 0775 system system
-
-service nqnfcinfo /vendor/bin/nqnfcinfo
-    class late_start
-    group nfc
-    user system
-    oneshot
 
 service iop /vendor/bin/iop
     class main
@@ -503,14 +488,6 @@ on property:persist.debug.trace=1
     mkdir /data/core 0777 root root
     write /proc/sys/kernel/core_pattern "/data/core/%E.%p.%e"
 
-#zhuxiaomin @ 20170928
-service iwprivftm /system/bin/sh /system/etc/iwpriv.agent.sh
-    oneshot
-    disabled
-on property:persist.sys.iwpriv=1
-    start iwprivftm
-
-#++++>
 on property:sys.ptt_socket_app=1
     start ptt_ffbm
 
@@ -1212,11 +1189,6 @@ service time_daemon /vendor/bin/time_daemon
     user root
     group root
 
-service qdmastatsd /vendor/bin/qdmastatsd
-    class late_start
-    user system
-    group readproc system net_bw_stats radio
-
 service vppservice /vendor/bin/vppservice
     class main
     user media
@@ -1253,14 +1225,6 @@ service closewifi /system/bin/sh /vendor/bin/wifitest_close.sh
     disabled
     oneshot
 
-#for wifi myftm test
-service myftmftm /vendor/bin/sh /vendor/bin/myftm.agent.sh
-    oneshot
-    disabled
-on property:persist.sys.myftm=1
-    start myftmftm
-    
-#zhufanghua@longcheer.com
 service btclose /vendor/bin/sh /vendor/bin/bt_close.sh
 	user root
 	group root
@@ -1268,18 +1232,6 @@ service btclose /vendor/bin/sh /vendor/bin/bt_close.sh
 	disabled
 on property:sys.closebt=1
 	start btclose
-
-service wdsdaemon /vendor/bin/wdsdaemon -su
-	user root
-	group root
-	oneshot
-	disabled
-
-on property:sys.start_wdsdaemon=1
-	start wdsdaemon
-
-on property:sys.start_wdsdaemon=0
-	stop wdsdaemon
 
 #lct add runin
 on property:persist.sys.runin=enable
@@ -1294,20 +1246,7 @@ on property:sys.thermal.isincall=1
 
 on property:sys.thermal.isincall=0
     write /sys/class/power_supply/battery/device/thermalcall 0
-    
-#Add command for PA test begin
-service LctDiagSendData /vendor/bin/LctDiagSendData
-    class core
-    user root
-    oneshot
-    disabled
-#on property:persist.sys.lctdiagsenddata=1
-#    start LctDiagSendData
-#on property:persist.sys.lctdiagsenddata=0
-#    stop LctDiagSendData
-on property:ro.runtime.firstboot=*
-    start LctDiagSendData
-#Add command for PA test end
+
 service power_off_alarm /vendor/bin/power_off_alarm
     class core
     group system

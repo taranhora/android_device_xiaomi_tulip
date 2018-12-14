@@ -372,12 +372,6 @@ service mdtpd /vendor/bin/mdtpd
 service pd_mapper /vendor/bin/pd-mapper
      class core
 
-service checknv /vendor/bin/checknv
-    class late_start
-    user root
-    oneshot
-    seclabel u:r:recovery:s0
-
 #
 ## QCA1530 SoC late_start group trigger
 #service gnss-init /vendor/bin/gnss.qca1530.sh init
@@ -490,159 +484,11 @@ service smcinvoked /system/bin/smcinvoked
    user system
    group system
 
-# smart pa cal     tsx 08/26
-service pa-cal-load /vendor/bin/smart-pa-cal -load
-    user root
-    group root
-    disabled
-    oneshot
-
-# smart pa cal     tsx 08/26
-service smart-pa-cal /vendor/bin/smart-pa-cal -t 30 -c /vendor/etc/speaker.ftcfg -v -u
-    user root
-    group root
-    disabled
-    oneshot
-
-on property:sys.pa-cal=0
-    stop smart-pa-cal
-
-on property:sys.pa-cal=1
-    start smart-pa-cal
-
-# audio loopback test begin    tsx 08/26
-service loopback_spk1 /vendor/bin/loopback.sh 1 1
-    user root
-    group root
-    disabled
-    oneshot
-	
-service loopback_spk0 /vendor/bin/loopback.sh 1 0
-    user root
-    group root
-    disabled
-    oneshot
-	
-service loopback_rec1 /vendor/bin/loopback.sh 2 1
-    user root
-    group root
-    disabled
-    oneshot
-	
-service loopback_rec0 /vendor/bin/loopback.sh 2 0
-    user root
-    group root
-    disabled
-    oneshot
-	
-service loopback_hand1 /vendor/bin/loopback.sh 3 1
-    user root
-    group root
-    disabled
-    oneshot
-	
-service loopback_hand0 /vendor/bin/loopback.sh 3 0
-    user root
-    group root
-    disabled
-    oneshot
-	
-service loopback_sec1 /vendor/bin/loopback.sh 4 1
-    user root
-    group root
-    disabled
-    oneshot
-	
-service loopback_sec0 /vendor/bin/loopback.sh 4 0
-    user root
-    group root
-    disabled
-    oneshot
-
-service spk_playback1 /vendor/bin/loopback.sh 5 1
-    user root
-    group root
-    disabled
-    oneshot
-	
-service spk_playback0 /vendor/bin/loopback.sh 5 0
-    user root
-    group root
-    disabled
-    oneshot
-
-on property:sys.loopback-spk=1
-    start loopback_spk1
-	
-on property:sys.loopback-spk=0
-    start loopback_spk0
-	
-on property:sys.loopback-rec=1
-    start loopback_rec1
-	
-on property:sys.loopback-rec=0
-    start loopback_rec0
-	
-on property:sys.loopback-mic1=1
-    start loopback_hand1
-	
-on property:sys.loopback-mic1=0
-    start loopback_hand0
-	
-on property:sys.loopback-mic2=1
-    start loopback_sec1
-	
-on property:sys.loopback-mic2=0
-    start loopback_sec0
-
-on property:sys.spk-playback=1
-    start spk_playback1
-	
-on property:sys.spk-playback=0
-    start spk_playback0
-
-service tinyhostless_spk /vendor/bin/tinyhostless -D 0 -P 35 -C 11 -p 8 -n 2 -c 1 -r 48000
-    user root
-    group root
-    disabled
-    oneshot
-
-service tinyhostless /vendor/bin/tinyhostless -D 0 -P 5 -C 11 -p 8 -n 2 -c 1 -r 48000
-    user root
-    group root
-    disabled
-    oneshot
-
-on property:sys.tinyhostless=0
-    stop tinyhostless 
-
-on property:sys.tinyhostless=1
-    start tinyhostless
-
-on property:sys.tinyhostless-spk=0
-    stop tinyhostless_spk
-
-on property:sys.tinyhostless-spk=1
-    start tinyhostless_spk
-	
-#audio loopback test end
 on property:persist.sys.display_srgb=1
     write /sys/class/graphics/fb0/msm_fb_srgb 1
 
 on property:persist.sys.display_srgb=2
     write /sys/class/graphics/fb0/msm_fb_srgb 2
-
-service adswitch /vendor/bin/adswitch
-    user root
-    group root
-    disabled
-    oneshot
-
-on property:sys.ad.enable=on
-    start adswitch
-
-on property:sys.ad.enable=off
-    start adswitch
 
 on property:sys.dynamic_debug=1
    write /sys/kernel/debug/dynamic_debug/control "file q6afe.c +p" 
@@ -687,43 +533,6 @@ on property:persist.sys.display_gamma=1
 
 on property:persist.sys.display_gamma=2
     write /sys/class/graphics/fb0/msm_fb_gamma 2
-
-#add for wifi sar 
-service wifisarnear /vendor/bin/wifisarnear
-    user root 
-    group root
-    oneshot
-    disabled
-
-on property:sys.wifisarnear=1
-    start wifisarnear
-
-service wifisarfar /vendor/bin/wifisarfar
-    user root 
-    group root
-    oneshot
-    disabled
-
-on property:sys.wifisarfar=1
-    start wifisarfar
-
-service wifisarDIS1 /vendor/bin/wifisarDIS1
-    user root
-    group root
-    oneshot
-    disabled
-
-on property:persist.sys.wifisarDIS1=1
-    start wifisarDIS1
-
-service wifisarDIS2 /vendor/bin/wifisarDIS2
-    user root
-    group root
-    oneshot
-    disabled
-
-on property:persist.sys.wifisarDIS2=1
-    start wifisarDIS2
 
 service remosaic_daemon /vendor/bin/remosaic_daemon
 	class late_start
