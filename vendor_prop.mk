@@ -12,6 +12,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	audio.deep_buffer.media=true \
 	audio.offload.min.duration.secs=30 \
 	audio.offload.video=true \
+	persist.audio.soundfx.type=mi \
 	persist.dirac.acs.controller=qem \
 	persist.dirac.acs.ignore_error=1 \
 	persist.dirac.acs.storeSettings=1 \
@@ -22,9 +23,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.audio.ras.enabled=false \
 	ro.audio.para.version=AUDIO_HMI_L6660_A01_20180919_V15 \
 	ro.audio.soundfx.dirac=true \
+	ro.audio.soundfx.type=mi \
 	ro.vendor.audio.sdk.fluencetype=none \
 	ro.vendor.audio.sdk.ssr=false \
 	ro.vendor.audio.sos=true \
+	ro.vendor.audio.soundfx.type=mi \
 	vendor.audio.dolby.ds2.enabled=false \
 	vendor.audio.dolby.ds2.hardbypass=false \
 	vendor.audio.flac.sw.decoder.24bit=true \
@@ -193,7 +196,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vendor.extension_library=libqti-perfd-client.so \
 	ro.vendor.qti.config.zram=true \
 	ro.vendor.qti.core_ctl_max_cpu=4 \
-	ro.vendor.qti.core_ctl_min_cpu=2
+	ro.vendor.qti.core_ctl_min_cpu=2 \
+	ro.vendor.qti.sys.fw.bservice_enable=true
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -253,6 +257,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vendor.sensors.facing=false \
 	ro.vendor.sensors.mot_detect=true \
 	ro.vendor.sensors.pmd=true \
+	ro.vendor.sensors.pug = true \
 	ro.vendor.sensors.sta_detect=true
 
 # Shutdown
@@ -274,7 +279,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Vendor security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.lineage.build.vendor_security_patch=2018-10-01
+	ro.lineage.build.vendor_security_patch=2018-12-01
 
 # WFD display
 PRODUCT_PROPERTY_OVERRIDES += \
