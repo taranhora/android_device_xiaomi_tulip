@@ -41,6 +41,8 @@ vendor/lib/rfsa/adsp/misound_res.bin
 -lib/libantradio.so
 lib64/com.qualcomm.qti.ant@1.0.so
 lib/com.qualcomm.qti.ant@1.0.so
+lib/libskia.so
+lib64/libskia.so
 vendor/lib64/com.qualcomm.qti.ant@1.0_vendor.so
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
 vendor/lib/com.qualcomm.qti.ant@1.0_vendor.so
@@ -1275,6 +1277,8 @@ vendor/lib64/libsecureui_svcsock.so
 vendor/lib64/libSecureUILib.so
 vendor/lib64/libsi.so
 vendor/lib64/libssd.so
+vendor/lib64/libspl.so|bcc4eb3930bbeceb4598299f2ae6d0573ce8a75d
+vendor/lib/libspl.so|501c6349fb217500a2735bbe548b00614e767cbb
 vendor/lib64/libStDrvInt.so
 vendor/lib64/libtzdrmgenprov.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0_vendor.so
@@ -2068,6 +2072,8 @@ lib64/com.qualcomm.qti.wifidisplayhal@1.0.so
 lib64/libExtendedExtractor.so
 lib64/libFileMux.so
 lib64/libmmparser.so
+lib/libsoftkeymaster.so
+lib64/libsoftkeymaster.so
 lib64/libmmparser_lite.so
 lib64/libwfdavenhancements.so
 lib64/libwfdcodecv4l2.so
