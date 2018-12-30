@@ -29,3 +29,7 @@ VNDK_SP_LIBRARIES := \
     libutils \
     libutilscallstack \
     libdexfile
+
+EXTRA_VENDOR_LIBRARIES := \
+    vendor.display.config@1.0 \
+    vendor.display.config@1.1
