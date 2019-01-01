@@ -18,9 +18,11 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
+$(call inherit-product-if-exists, vendor/MiuiCamera/config.mk)
 
 # Inherit some common Lean stuff
-$(call inherit-product, vendor/syberia/common.mk)
+$(call inherit-product, vendor/lean/config/common.mk)
+
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Inherit from tulip device
@@ -29,7 +31,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := xiaomi
 PRODUCT_DEVICE := tulip
 PRODUCT_MANUFACTURER := xiaomi
-PRODUCT_NAME := syberia_tulip
+PRODUCT_NAME := lean_tulip
 PRODUCT_MODEL := Redmi Note 6 Pro
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi

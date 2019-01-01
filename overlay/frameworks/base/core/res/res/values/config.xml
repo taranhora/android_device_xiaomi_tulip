@@ -550,4 +550,10 @@
     <!-- Radius of the software rounded corners. -->
     <dimen name="rounded_corner_radius">92px</dimen>
 
+<!-- Default value for proximity check on screen wake
+     NOTE ! - Enable for devices that have a fast response proximity sensor (ideally < 300ms)-->
+    <bool name="config_proximityCheckOnWake">true</bool>
+    <integer name="config_proximityCheckTimeout">200</integer>
+    <bool name="config_proximityCheckOnWakeEnabledByDefault">false</bool>
+
 </resources>

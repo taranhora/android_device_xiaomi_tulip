@@ -476,8 +476,8 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, vendor/xiaomi/tulip/tulip-vendor.mk)
 
 # Prebuilt kernel
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/Image.gz-dtb:kernel
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/prebuilt/Image.gz-dtb:kernel
  # Prebuilt modules
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/qca_cld3_wlan.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/qca_cld3/qca_cld3_wlan.ko
+#PRODUCT_COPY_FILES += \
+ #   $(LOCAL_PATH)/prebuilt/qca_cld3_wlan.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/qca_cld3/qca_cld3_wlan.ko

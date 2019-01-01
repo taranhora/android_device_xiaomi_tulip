@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/syberia_tulip.mk
+    $(LOCAL_DIR)/lean_tulip.mk
