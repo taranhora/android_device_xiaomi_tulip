@@ -85,6 +85,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.exif.model=RedmiNote6Pro \
 	vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,com.qualcomm.qti.qmmi,org.lineageos.snap
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.HAL3.enabled=1 \
+    camera.hal1.packagelist=com.whatsapp,com.facebook.katana,com.instagram.android,com.snapchat.android,org.lineageos.snap
+
 # Charging maximum voltage
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.chg.max_volt_mv=9000
