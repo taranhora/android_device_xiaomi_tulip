@@ -278,6 +278,7 @@ TARGET_INIT_VENDOR_LIB := libinit_tulip
 TARGET_RECOVERY_DEVICE_MODULES := libinit_tulip
 
 # Wifi
+BOARD_USES_AOSP_WLAN_HAL := true
 BOARD_HAS_QCOM_WLAN := true
 BOARD_HAS_QCOM_WLAN_SDK := true
 BOARD_WLAN_DEVICE := qcwcn
@@ -290,7 +291,8 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
-WIFI_DRIVER_MODULE_PATH := vendor/lib/modules/qca_cld3/qca_cld3_wlan.ko
+WIFI_DRIVER_MODULE_PATH := vendor/lib/modules/wlan.ko
+WIFI_DRIVER_MODULE_NAME := "wlan"
 
 # inherit from the proprietary version
 -include vendor/xiaomi/tulip/BoardConfigVendor.mk
