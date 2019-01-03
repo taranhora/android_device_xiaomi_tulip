@@ -478,3 +478,7 @@ $(call inherit-product, vendor/xiaomi/tulip/tulip-vendor.mk)
 # Prebuilt kernel
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/Image.gz-dtb:kernel
+
+# Wallpapers
+PRODUCT_PACKAGES += \
+    WallpapersBReel2018
