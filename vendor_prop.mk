@@ -87,7 +87,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.HAL3.enabled=1 \
-    camera.hal1.packagelist=com.whatsapp,com.facebook.katana,com.instagram.android,com.snapchat.android,org.lineageos.snap
+    camera.hal1.packagelist=com.whatsapp,com.facebook.katana,com.instagram.android
 
 # Charging maximum voltage
 PRODUCT_PROPERTY_OVERRIDES += \
