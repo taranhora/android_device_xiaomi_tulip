@@ -1606,6 +1606,7 @@ vendor/lib64/libgcs-ipc.so
 vendor/lib64/libgcs-osal.so
 vendor/lib64/libgcs.so
 vendor/lib64/vendor.qti.voiceprint@1.0.so
+vendor/lib64/libsse.so|2cd6ab4f250b881fd6073923b636ea42ed8a0ce0
 vendor/lib/hw/sound_trigger.primary.sdm660.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libgcs-calwrapper.so
@@ -1613,6 +1614,7 @@ vendor/lib/libgcs-ipc.so
 vendor/lib/libgcs-osal.so
 vendor/lib/libgcs.so
 vendor/lib/libsmwrapper.so
+vendor/lib/libsse.so|8c6e3270789c102fd871258341041ce29aa5610c
 vendor/lib/vendor.qti.voiceprint@1.0.so
 
 # Media
