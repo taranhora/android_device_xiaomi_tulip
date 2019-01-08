@@ -16,14 +16,14 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
 
 # Inherit some common PE stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/nitrogen/products/common.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_GAPPS_ARCH := arm64
-CUSTOM_BUILD_TYPE=OFFICIAL
+#TARGET_GAPPS_ARCH := arm64
+#CUSTOM_BUILD_TYPE=OFFICIAL
 
 # Inherit from tulip device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -31,7 +31,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := xiaomi
 PRODUCT_DEVICE := tulip
 PRODUCT_MANUFACTURER := xiaomi
-PRODUCT_NAME := aosp_tulip
+PRODUCT_NAME := nitrogen_tulip
 PRODUCT_MODEL := Redmi Note 6 Pro
 TARGET_VENDOR := Xiaomi
 
