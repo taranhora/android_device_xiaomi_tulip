@@ -1,33 +1,39 @@
 # ADSP
 vendor/bin/adsprpcd
-vendor/lib64/libadsprpc.so
 vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libadsprpc.so
 vendor/lib64/libfastcvadsp_stub.so
 vendor/lib64/libfastcvopt.so
-vendor/lib/libadsprpc.so
+vendor/lib64/libmdsprpc.so
 vendor/lib/libadsp_default_listener.so
+vendor/lib/libadsp_hvx_callback_skel.so
+vendor/lib/libadsp_hvx_stub.so
+vendor/lib/libadsprpc.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
+vendor/lib/libmdsprpc.so
 
 # ADSP modules
+vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
+vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
+vendor/lib/rfsa/adsp/dirac_resource.dar
+vendor/lib/rfsa/adsp/libadsp_fd_skel.so
+vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so
+vendor/lib/rfsa/adsp/libadsp_hvx_skel.so
 vendor/lib/rfsa/adsp/libapps_mem_heap.so
 vendor/lib/rfsa/adsp/libdirac-capiv2.so
 vendor/lib/rfsa/adsp/libdspCV_skel.so
-vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
+vendor/lib/rfsa/adsp/libexternal_dog_skel.so
 vendor/lib/rfsa/adsp/libfastcvadsp.so
-vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
-vendor/lib/rfsa/adsp/libscveT2T_skel.so
-vendor/lib/rfsa/adsp/libvpp_svc_skel.so
-vendor/lib/rfsa/adsp/dirac_resource.dar
+vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
 vendor/lib/rfsa/adsp/libFastRPC_AUE_Forward_skel.so
 vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_800h_skel.so
 vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so
-vendor/lib/rfsa/adsp/libadsp_hvx_add_constant.so
-vendor/lib/rfsa/adsp/libadsp_hvx_skel.so
-vendor/lib/rfsa/adsp/libscveFaceLandmark_skel.so
-vendor/lib/rfsa/adsp/libadsp_fd_skel.so
-vendor/lib/rfsa/adsp/libexternal_dog_skel.so
 vendor/lib/rfsa/adsp/libhvxMathVIO.so
+vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so
+vendor/lib/rfsa/adsp/libscveFaceLandmark_skel.so
+vendor/lib/rfsa/adsp/libscveT2T_skel.so
+vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 
 # Audio ACDB
 vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
@@ -40,28 +46,51 @@ vendor/etc/acdbdata/MTP/MTP_Speaker_cal.acdb
 vendor/etc/acdbdata/MTP/MTP_workspaceFile.qwsp
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
-# Audio libraries
-vendor/lib64/soundfx/libqcbassboost.so
-vendor/lib64/soundfx/libqcreverb.so
-vendor/lib64/soundfx/libqcvirt.so
+# Audio
+vendor/bin/audioflacapp
+vendor/etc/diracvdd.bin
+vendor/etc/drc/drc_cfg_5.1.txt
+vendor/etc/drc/drc_cfg_AZ.txt
+vendor/etc/speaker.ftcfg
+vendor/etc/surround_sound_3mic/surround_sound_rec_5.1.cfg
+vendor/etc/surround_sound_3mic/surround_sound_rec_AZ.cfg
 vendor/lib64/libacdb-fts.so
 vendor/lib64/libacdbloader.so
+vendor/lib64/libacdbmapper.so
 vendor/lib64/libacdbrtac.so
 vendor/lib64/libadiertac.so
 vendor/lib64/libaudcal.so
-vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcreverb.so
-vendor/lib/soundfx/libqcvirt.so
+vendor/lib64/libaudioalsa.so
+vendor/lib64/libaudioparsers.so
+vendor/lib64/libqtigef.so
+vendor/lib64/soundfx/libasphere.so
+vendor/lib64/soundfx/libqcbassboost.so
+vendor/lib64/soundfx/libqcreverb.so
+vendor/lib64/soundfx/libqcvirt.so
+vendor/lib64/soundfx/libshoebox.so
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
+vendor/lib/libacdbmapper.so
 vendor/lib/libacdbrtac.so
 vendor/lib/libadiertac.so
 vendor/lib/libadm.so
 vendor/lib/libaudcal.so
+vendor/lib/libaudioalsa.so
+vendor/lib/libaudioparsers.so
+vendor/lib/libdrc.so
 vendor/lib/libqtigef.so
+vendor/lib/libsurround_3mic_proc.so
+vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libqcbassboost.so
+vendor/lib/soundfx/libqcreverb.so
+vendor/lib/soundfx/libqcvirt.so
+vendor/lib/soundfx/libshoebox.so
 
 # Audio speaker firmware
 vendor/firmware/tas2557_uCDSP.bin
+vendor/firmware/dbmd4_va_fw.bin
+vendor/firmware/tfa98xx.cnt
+vendor/firmware/voice_amodel.bin
 
 # Bluetooth
 vendor/bin/btnvtool
@@ -1642,7 +1671,6 @@ vendor/bin/StoreKeybox
 vendor/bin/WifiLogger_app
 vendor/bin/adswitch
 vendor/bin/athdiag
-vendor/bin/audioflacapp
 vendor/bin/bluedut.sh
 vendor/bin/bt_close.sh
 vendor/bin/capture_audio.sh
@@ -1730,9 +1758,6 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
-vendor/etc/diracvdd.bin
-vendor/etc/drc/drc_cfg_5.1.txt
-vendor/etc/drc/drc_cfg_AZ.txt
 vendor/etc/ftm_test_config
 vendor/etc/gamedwhitelist.xml
 vendor/etc/graphite_ipc_platform_info.xml
@@ -1776,11 +1801,8 @@ vendor/etc/receiver_playback.wav
 vendor/etc/scve/facereco/gModel.dat
 vendor/etc/silence.wav
 vendor/etc/silense.wav
-vendor/etc/speaker.ftcfg
 vendor/etc/speaker_playback.wav
 vendor/etc/spk_pb.wav
-vendor/etc/surround_sound_3mic/surround_sound_rec_5.1.cfg
-vendor/etc/surround_sound_3mic/surround_sound_rec_AZ.cfg
 vendor/etc/sweep.wav
 vendor/etc/whitelistedapps.xml
 vendor/etc/wifi/fstman.ini
@@ -1791,11 +1813,8 @@ vendor/firmware/a530v1_pm4.fw
 vendor/firmware/a530v2_seq.fw2
 vendor/firmware/a530v3_gpmu.fw2
 vendor/firmware/a530v3_seq.fw2
-vendor/firmware/dbmd4_va_fw.bin
 vendor/firmware/leia_pfp_470.fw
 vendor/firmware/leia_pm4_470.fw
-vendor/firmware/tfa98xx.cnt
-vendor/firmware/voice_amodel.bin
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so
 vendor/lib/com.qualcomm.qti.wifidisplayhal@1.0-impl.so
 vendor/lib/com.quicinc.cne.api@1.0.so
@@ -1846,15 +1865,10 @@ vendor/lib/libUBWC.so
 vendor/lib/libUserAgent.so
 vendor/lib/lib_drplugin_server.so
 vendor/lib/lib_remote_simlock.so
-vendor/lib/libacdbmapper.so
 vendor/lib/libactuator_whyred_s5k2l7_ofilm_cn_i_ak7374.so
 vendor/lib/libactuator_whyred_s5k2l7_qtech_cn_ii_ak7374.so
 vendor/lib/libadpcmdec.so
-vendor/lib/libadsp_hvx_callback_skel.so
-vendor/lib/libadsp_hvx_stub.so
 vendor/lib/libalarmservice_jni.so
-vendor/lib/libaudioalsa.so
-vendor/lib/libaudioparsers.so
 vendor/lib/libbase64.so
 vendor/lib/libbt-hidlclient.so
 vendor/lib/libc2d30-a3xx.so
@@ -1866,7 +1880,6 @@ vendor/lib/libdataitems.so
 vendor/lib/libdiagjni.so
 vendor/lib/libdisp-aba.so
 vendor/lib/libdpmqmihal.so
-vendor/lib/libdrc.so
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
 vendor/lib/libdrplugin_client.so
@@ -1898,7 +1911,6 @@ vendor/lib/liblocationservice_glue.so
 vendor/lib/liblowi_client.so
 vendor/lib/liblowi_wifihal.so
 vendor/lib/liblqe.so
-vendor/lib/libmdsprpc.so
 vendor/lib/libmfido.so
 vendor/lib/libmlipay.so
 vendor/lib/libmm-color-convertor.so
@@ -1946,7 +1958,6 @@ vendor/lib/libslimclient.so
 vendor/lib/libssd.so
 vendor/lib/libstreamparser.so
 vendor/lib/libsubsystem_control.so
-vendor/lib/libsurround_3mic_proc.so
 vendor/lib/libsystem_health_mon.so
 vendor/lib/libteeclientjni.so
 vendor/lib/libtida.so
@@ -1967,8 +1978,6 @@ vendor/lib/qcdrm/playready/lib/libtzplayready_customer.so
 vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmdecrypt_customer.so
 vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmplugin_customer.so
 vendor/lib/sensor_calibrate.so
-vendor/lib/soundfx/libasphere.so
-vendor/lib/soundfx/libshoebox.so
 vendor/lib64/com.qualcomm.qti.wifidisplayhal@1.0-halimpl.so
 vendor/lib64/com.qualcomm.qti.wifidisplayhal@1.0-impl.so
 vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
@@ -2001,9 +2010,6 @@ vendor/lib64/libUBWC.so
 vendor/lib64/libUserAgent.so
 vendor/lib64/lib_drplugin_server.so
 vendor/lib64/lib_remote_simlock.so
-vendor/lib64/libacdbmapper.so
-vendor/lib64/libaudioalsa.so
-vendor/lib64/libaudioparsers.so
 vendor/lib64/libbase64.so
 vendor/lib64/libbt-hidlclient.so
 vendor/lib64/libc2d30-a3xx.so
@@ -2023,7 +2029,6 @@ vendor/lib64/libhbtpdsp.so
 vendor/lib64/libhbtpfrmwk.so
 vendor/lib64/libhdcp1prov.so
 vendor/lib64/libhdcp2p2prov.so
-vendor/lib64/libmdsprpc.so
 vendor/lib64/libmfido.so
 vendor/lib64/libmlipay.so
 vendor/lib64/libmm-color-convertor.so
@@ -2042,7 +2047,6 @@ vendor/lib64/libpvr.so
 vendor/lib64/libqisl.so
 vendor/lib64/libqti-gt-prop.so
 vendor/lib64/libqti-perfd.so
-vendor/lib64/libqtigef.so
 vendor/lib64/librecovery_updater_msm.so
 vendor/lib64/librmp.so
 vendor/lib64/libsdedrm.so
@@ -2066,8 +2070,6 @@ vendor/lib64/libwfdmmservice.so
 vendor/lib64/libwfdmodulehdcpsession.so
 vendor/lib64/mediadrm/libwvdrmengine.so
 vendor/lib64/sensor_calibrate.so
-vendor/lib64/soundfx/libasphere.so
-vendor/lib64/soundfx/libshoebox.so
 vendor/media/LMspeed_508.emd
 vendor/media/PFFprec_600.emd
 vendor/speccfg/switch_spec.sh
