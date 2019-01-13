@@ -162,6 +162,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     XiaomiDoze
 
+# Fingerprint feature
+PRODUCT_PACKAGES += \
+    fingerprintd \
+    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sdm660
+
 # Wifi
 PRODUCT_PACKAGES += \
     ipacm \
