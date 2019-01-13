@@ -49,16 +49,6 @@ PRODUCT_PACKAGES += \
     android.hardware.broadcastradio@1.0-impl \
     android.hardware.soundtrigger@2.0-impl
 
-#Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@3.0-service \
-    android.hardware.keymaster@3.0-impl
-
-#Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-service \
-    android.hardware.gatekeeper@1.0-impl
-
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-service \
@@ -122,10 +112,6 @@ PRODUCT_PACKAGES += \
 #Tether
 PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.control@1.0
-
-#Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sdm660
 
 #Lights
 PRODUCT_PACKAGES += \

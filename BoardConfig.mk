@@ -15,7 +15,7 @@
 #
 
 # Board device path
-DEVICE_PATH := device/xiaomi/whyred
+DEVICE_PATH := device/xiaomi/tulip
 
 BOARD_VENDOR := xiaomi
 
@@ -42,6 +42,7 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -50,10 +51,8 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm660
-TARGET_KERNEL_CONFIG := whyred-perf_defconfig
+TARGET_KERNEL_CONFIG := tulip_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
-TARGET_KERNEL_CLANG_COMPILE := true
-
 
 # Partitions
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -171,8 +170,8 @@ VSYNC_EVENT_PHASE_OFFSET_NS := 2000000
 SF_VSYNC_EVENT_PHASE_OFFSET_NS := 6000000
 
 # Vendor init
-TARGET_INIT_VENDOR_LIB := libinit_whyred
-TARGET_RECOVERY_DEVICE_MODULES := libinit_whyred
+TARGET_INIT_VENDOR_LIB := libinit_tulip
+TARGET_RECOVERY_DEVICE_MODULES := libinit_tulip
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true
@@ -253,4 +252,4 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 TARGET_USES_MKE2FS := true
 
 # Inherit from proprietary files
-include vendor/xiaomi/whyred/BoardConfigVendor.mk
+include vendor/xiaomi/tulip/BoardConfigVendor.mk

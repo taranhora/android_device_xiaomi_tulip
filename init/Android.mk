@@ -25,7 +25,7 @@ LOCAL_C_INCLUDES := \
     system/core/init
 LOCAL_CFLAGS := -Wall
 LOCAL_CPPFLAGS := -Wall
-LOCAL_SRC_FILES := init_whyred.cpp
-LOCAL_MODULE := libinit_whyred
+LOCAL_SRC_FILES := init_tulip.cpp
+LOCAL_MODULE := libinit_tulip
 
 include $(BUILD_STATIC_LIBRARY)

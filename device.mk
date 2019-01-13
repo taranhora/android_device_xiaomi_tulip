@@ -24,7 +24,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
 
 # Properties
--include device/xiaomi/whyred/vendor_prop.mk
+-include device/xiaomi/tulip/vendor_prop.mk
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -330,6 +330,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbt-vendor
 
-$(call inherit-product, device/xiaomi/whyred/treble.mk)
+$(call inherit-product, device/xiaomi/tulip/treble.mk)
 # Call the proprietary setup
-$(call inherit-product, vendor/xiaomi/whyred/whyred-vendor.mk)
+$(call inherit-product, vendor/xiaomi/tulip/tulip-vendor.mk)
