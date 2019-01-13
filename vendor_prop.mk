@@ -83,6 +83,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.dec.enable.downscalar=1 \
     vendor.vidc.enc.disable.pq=false
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.camera.HAL3.enabled=1 \
+    camera.hal1.packagelist=com.whatsapp,com.facebook.katana,com.instagram.android,org.lineageos.snap
+
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.cne.feature=1
