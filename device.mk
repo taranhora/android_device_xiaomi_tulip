@@ -119,11 +119,8 @@ PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
-    libxml2
-
-# GoogleCamera
-PRODUCT_PACKAGES += \
-    GoogleCameraMod
+    libxml2 \
+    Snap
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
@@ -482,6 +479,3 @@ $(call inherit-product, vendor/xiaomi/tulip/tulip-vendor.mk)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/Image.gz-dtb:kernel
 
-# Wallpapers
-PRODUCT_PACKAGES += \
-    WallpapersBReel2018

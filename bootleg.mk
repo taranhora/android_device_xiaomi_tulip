@@ -28,7 +28,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := xiaomi
 PRODUCT_DEVICE := tulip
 PRODUCT_MANUFACTURER := xiaomi
-PRODUCT_NAME := aosp_tulip
+PRODUCT_NAME := bootleg_tulip
 PRODUCT_MODEL := Redmi Note 6 Pro
 TARGET_VENDOR := Xiaomi
 
