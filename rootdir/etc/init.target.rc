@@ -125,6 +125,10 @@ on boot
     chown system system /persist/speccfg/submask
     chown system system /persist/speccfg/partition
 
+    # Touchscreen
+    chown system system /proc/touchpanel/wake_gesture
+    chmod 0660 /proc/touchpanel/wake_gesture
+
 #Load WLAN driver
    insmod /vendor/lib/modules/wlan.ko
    setprop wlan.driver.status "ok"
