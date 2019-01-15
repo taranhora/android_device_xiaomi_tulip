@@ -113,7 +113,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
 	drm.service.enabled=true
-
+		
+# Display
+PRODUCT_PROPERTY_OVERRIDES += \
+        ro.sf.lcd_density=440
+	 
 # Enable all system restart_level to relative
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.ssr.restart_level=ALL_ENABLE
