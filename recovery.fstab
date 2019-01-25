@@ -8,6 +8,8 @@
 /boot           emmc    /dev/block/bootdevice/by-name/boot                    flags=display="Boot"
 /cache          f2fs    /dev/block/bootdevice/by-name/cache                   flags=display="Cache"
 /data           f2fs    /dev/block/bootdevice/by-name/userdata                flags=length=-16384;encryptable=footer;fileencryption=ice:aes-256-heh
+/cache          ext4    /dev/block/bootdevice/by-name/cache                   flags=display="Cache"
+/data           ext4    /dev/block/bootdevice/by-name/userdata                flags=length=-16384;encryptable=footer;fileencryption=ice:aes-256-heh
 /recovery       emmc    /dev/block/bootdevice/by-name/recovery                flags=display="Recovery";backup=1
 
 /vendor         ext4    /dev/block/bootdevice/by-name/vendor                  flags=display="Vendor";backup=1;wipeingui
